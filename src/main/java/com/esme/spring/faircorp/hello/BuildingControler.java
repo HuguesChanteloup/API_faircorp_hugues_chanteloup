@@ -66,7 +66,7 @@ public class BuildingControler {
         List<Room> list = roomDaoImpl.FindRoomByBuilding(building);
 
         for (int i=0;i<list.size();i++) {
-            List<Light> listl = lightDaoImpl.findOnRoomId(list.get(i).getId());
+            List<Light> listl = lightDaoImpl.findOnRoomId(list.get(i));
 
             for (int j=0;j<list.size();j++) {
                 lightDao.deleteById(listl.get(j).getId());
