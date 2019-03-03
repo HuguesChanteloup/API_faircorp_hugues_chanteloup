@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/faircorp.iml" filepath="$PROJECT_DIR$/faircorp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/faircorp_main.iml" filepath="$PROJECT_DIR$/.idea/modules/faircorp_main.iml" group="faircorp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/faircorp_test.iml" filepath="$PROJECT_DIR$/.idea/modules/faircorp_test.iml" group="faircorp" />
+    </modules>
+  </component>
+</project>
