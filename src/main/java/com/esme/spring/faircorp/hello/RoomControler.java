@@ -21,7 +21,7 @@ public class RoomControler {
     private LightDao lightDao;
 
     @Autowired
-    private BuildingDao buildingDao
+    private BuildingDao buildingDao;
 
     private RoomDaoImpl roomDaoImpl;
     private LightDaoImpl lightDaoImpl;
