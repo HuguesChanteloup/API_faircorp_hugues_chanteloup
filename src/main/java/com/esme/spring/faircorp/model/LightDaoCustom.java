@@ -4,5 +4,5 @@ import java.util.List;
 
 public interface LightDaoCustom {
     List<Light> findOnLights();
-    List<Light> findOnRoomId(Room room)
+    List<Light> findOnRoomId(Room room);
 }
