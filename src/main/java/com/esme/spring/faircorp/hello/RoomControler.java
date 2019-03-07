@@ -20,6 +20,9 @@ public class RoomControler {
     @Autowired
     private LightDao lightDao;
 
+    @Autowired
+    private BuildingDao buildingDao
+
     private RoomDaoImpl roomDaoImpl;
     private LightDaoImpl lightDaoImpl;
 
