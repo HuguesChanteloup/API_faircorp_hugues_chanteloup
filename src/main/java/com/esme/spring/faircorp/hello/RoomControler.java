@@ -63,7 +63,6 @@ public class RoomControler {
     @DeleteMapping(path = "/{id}")
     public void delete(@PathVariable Long id) {
 
-        System.out.print("ça fait un bout de temps");
         Room room = roomDaoImpl.FindRoomById(id);
         List<Light> list = lightDaoImpl.findOnRoomId(room);
         for (int i=0;i<list.size();i++) {
