@@ -33,7 +33,7 @@ public class RoomDto {
         return floor;
     }
 
-    public Long getBuildingid() {
+    public Long getBuildingId() {
         return buildingid;
     }
 }
