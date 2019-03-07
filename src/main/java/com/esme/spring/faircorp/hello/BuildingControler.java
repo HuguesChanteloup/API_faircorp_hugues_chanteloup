@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/api/buildings")
 @Transactional
+@CrossOrigin
 public class BuildingControler {
 
     @Autowired
