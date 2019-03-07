@@ -25,9 +25,10 @@ public class Room {
 
     public Room() {}
 
-    public Room(Integer floor,String name) {
+    public Room(String name,Integer floor,Building building) {
         this.floor = floor;
         this.name = name;
+        this.building = building;
     }
 
     public Long getId() { return id;}

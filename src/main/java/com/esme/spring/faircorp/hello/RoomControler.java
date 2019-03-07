@@ -45,7 +45,7 @@ public class RoomControler {
         }
 
         if (room == null) {
-            room = roomDao.save(new Room(dto.getFloor(),dto.getName()));
+            room = roomDao.save(new Room(dto.getName(),dto.getFloor(),buildingDao.getOne(dto.getBuildingId())));
         }
 
         else {
