@@ -69,7 +69,6 @@ public class LightControler {
 
     @DeleteMapping(path = "/{id}")
     public void delete(@PathVariable Long id) {
-        System.out.print("first statement. ");
         lightDao.deleteById(id);
     }
 }

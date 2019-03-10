@@ -65,9 +65,9 @@ public class BuildingControler {
 
     @DeleteMapping(path = "/{id}")
     public void delete(@PathVariable Long id) {
-        Building building = buildingDaoImpl.findBuildingById(id);
+        List<Building> building = buildingDaoImpl.findBuildingById(id);
 
-        List<Room> list = roomDaoImpl.FindRoomByBuilding(building);
+        List<Room> list = roomDaoImpl.FindRoomByBuilding(building.get(0));
 
         for (int i=0;i<list.size();i++) {
             List<Light> listl = lightDaoImpl.findOnRoomId(list.get(i));

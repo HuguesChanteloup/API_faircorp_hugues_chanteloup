@@ -25,7 +25,7 @@ public class RoomControler {
 
     @Autowired
     private RoomDaoImpl roomDaoImpl;
-    
+
     @Autowired
     private LightDaoImpl lightDaoImpl;
 
@@ -66,8 +66,8 @@ public class RoomControler {
     @DeleteMapping(path = "/{id}")
     public void delete(@PathVariable Long id) {
 
-        Room room = roomDaoImpl.FindRoomById(id);
-        List<Light> list = lightDaoImpl.findOnRoomId(room);
+        List<Room> room = roomDaoImpl.FindRoomById(id);
+        List<Light> list = lightDaoImpl.findOnRoomId(room.get(0));
         for (int i=0;i<list.size();i++) {
              lightDao.deleteById(list.get(i).getId());
         }
