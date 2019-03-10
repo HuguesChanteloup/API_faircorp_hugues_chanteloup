@@ -12,6 +12,6 @@ public class BuildingDaoImpl implements BuildingDaoCustom{
 
     public List<Building> findBuildingById(Long id) {
         String jpql = "Select building from Building building where building.id = :value";
-        return (Building) em.createQuery(jpql, Building.class).setParameter("value",id).getResultList();
+        return em.createQuery(jpql, Building.class).setParameter("value",id).getResultList();
     }
 }
