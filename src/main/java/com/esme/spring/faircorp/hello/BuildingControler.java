@@ -23,10 +23,13 @@ public class BuildingControler {
     @Autowired
     private LightDao lightDao;
 
+    @Autowired
     private BuildingDaoImpl buildingDaoImpl;
 
+    @Autowired
     private RoomDaoImpl roomDaoImpl;
 
+    @Autowired
     private LightDaoImpl lightDaoImpl;
 
     @GetMapping
