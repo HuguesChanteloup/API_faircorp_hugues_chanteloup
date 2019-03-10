@@ -68,8 +68,11 @@ public class RoomControler {
 
         List<Room> room = roomDaoImpl.FindRoomById(id);
         List<Light> list = lightDaoImpl.findOnRoomId(room.get(0));
-        for (int i=0;i<list.size();i++) {
-             lightDao.deleteById(list.get(i).getId());
+
+        if(!list.size().equals(0)){
+          for (int i=0;i<list.size();i++) {
+               lightDao.deleteById(list.get(i).getId());
+          }
         }
 
          roomDao.deleteById(id);
