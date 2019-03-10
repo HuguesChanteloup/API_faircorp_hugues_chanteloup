@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 @RestController  // (1)
 @RequestMapping("/api/lights") // (2)
 @Transactional // (3)
-@CrossOrigin
+@CrossOrigin(origins = "*")
 public class LightControler {
 
     @Autowired
