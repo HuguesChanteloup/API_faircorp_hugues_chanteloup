@@ -9,11 +9,10 @@ import javax.transaction.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 
-
+@CrossOrigin
 @RestController  // (1)
 @RequestMapping("/api/lights") // (2)
 @Transactional // (3)
-@CrossOrigin(origins = "*")
 public class LightControler {
 
     @Autowired
@@ -35,6 +34,7 @@ public class LightControler {
         return lightDao.findById(id).map(light -> new LightDto(light)).orElse(null);
     }
 
+    @CrossOrigin
     @PutMapping(path = "/{id}/switch")
     public LightDto switchStatus(@PathVariable Long id) {
         Light light = lightDao.findById(id).orElseThrow(IllegalArgumentException::new);
@@ -49,6 +49,7 @@ public class LightControler {
         return new LightDto(light);
     }
 
+    @CrossOrigin
     @PostMapping
     public LightDto create(@RequestBody LightDto dto) {
         Light light = null;
